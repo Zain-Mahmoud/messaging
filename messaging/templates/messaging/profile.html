@@ -1,0 +1,15 @@
+{% extends 'messaging/layout.html' %}
+{% load static %}
+
+{% block title %}
+    {{ user.first_name }}
+{% endblock %}
+
+{% block body %}
+    <div style="display: flex; flex-direction: row;">
+        <img src="{{ user.profilepicture.url }}" alt="Profile picture" class="circle">
+        <h3 class="firstname">{{ user.first_name }} {{ user.last_name }}</h3>
+    </div>
+    
+    <h4 class="username">Username: {{ user.username }}</h4>
+{% endblock %}
